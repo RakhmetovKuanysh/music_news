@@ -1,0 +1,147 @@
+.wrapper{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wrapper > *{
+	flex: 1 50%;
+}
+
+.news-grid{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	height: 100%;
+	position: inherit;
+}
+
+.charts-grid{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	height: 100%;
+	position: inherit;
+}
+
+.row-news, .row-charts{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 50%;
+	position: inherit;
+	margin: 0;
+}
+
+
+
+.column-news{
+	flex: 50%;
+	max-width: 50%;
+	width: 50%;
+	position: inherit;
+}
+
+.column-charts-left, .column-charts-right{
+	flex: 50%;
+	max-width: 50%;
+	width: 50%;
+	position: inherit;
+}
+
+.column-news img{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.image-news{
+	width: 100%;
+	display: block;
+	height: auto;
+	position: relative;
+}
+
+.image-charts-big{
+	width: 100%;
+	height: 120%;
+}
+
+.image-container, .column-charts-left{
+	height: auto;
+	width: 100%;
+	position: relative;
+}
+
+.image-container:hover .image-news{
+	opacity: 0.3;
+}
+
+.image-container:hover .image-data{
+	opacity: 1;
+}
+
+.image-data{
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.image-data-text{
+	color: black;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+.news-header, .charts-header{
+	padding-left: 58px;
+	padding-top: 20.6px;
+	padding-bottom: 22px;
+	border: 1px solid #c3c3c3;
+	margin: 0;
+	text-align: left;
+}
+
+.column-charts-left-data{
+	padding-left: 32px;
+}
+
+.column-charts-left-data-chart-name{
+	font-size: 18px;
+	margin: 0;
+	margin-top: 15.2px;
+	color: #343434;
+}
+
+.column-charts-left-data-singer-name{
+	font-size: 23px;
+	font-weight: bold;
+	margin: 0;
+	color: #343434;
+	margin-top: 15px;
+}
+
+.column-charts-left-data-song-name{
+	font-size: 14px;
+	margin: 0;
+	margin-top: 13px;
+	color: #343434;
+
+}
+
+.news, .charts{
+	border: 1px solid #c3c3c3;
+}
+
+.billboard-header{
+	padding: 0;
+	margin: 0;
+	padding-left: 27px;
+	padding-top: 12.4px;
+	padding-bottom: 17.8px;
+	color: #343434;
+	border: 1px solid #c3c3c3;
+}
