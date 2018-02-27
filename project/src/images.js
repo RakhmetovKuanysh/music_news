@@ -16,6 +16,8 @@ import allthestars from './img/allthestars.png'
 import pray4me from './img/pray4me.png'
 import rockstar from './img/rockstar.png'
 import charliefact from './img/charliefact.png'
+import krab2 from './img/krab2.png'
+import like from './img/like.png'
 
 export default{
 	gs,
@@ -36,4 +38,6 @@ export default{
 	pray4me,
 	rockstar,
 	charliefact
+    krab2,
+    like
 }

@@ -30,8 +30,13 @@
 }
 
 .header-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 280px;
-    height: 10px;
+    text-align: center;
+    margin-left: 40px;
 }
 
 .header-menu {
@@ -82,6 +87,7 @@
     align-items: center;
     justify-content: center;
     padding: 9px;
+    background-color: white;
     border: 1px solid #C3C3C3;
 }
 
@@ -161,22 +167,18 @@
 }
 
 .artist-info {
-    border: 1px solid #C3C3C3;
+    background-color: white;
     width: 40%;
-}
-
-.artist-info img {
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 500px;
-    padding: 20px 0 10px 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-bottom: 10px;
 }
 
 .artist-info-name {
     font-weight: bold;
     font-size: 28px;
     line-height: 1;
+    margin: 0;
 }
 
 .artist {
@@ -187,9 +189,27 @@
     margin-top: 20px;
 }
 
+.artist-info-songs-and-albums {
+    width: 60%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 .artist-songs {
-    border: 1px solid #C3C3C3;
-    width: 58%;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 16px;
+    padding: 5px 0 20px 0;
+}
+
+.album-info {
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+    padding: 5px 0 20px 0;
 }
 
 .artist-info-desc {
@@ -204,4 +224,251 @@
 
 .margin {
     text-align: center;
+}
+
+.artist-info-top-songs-p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+    padding: 20px 0 10px 15px;
+}
+
+.artist-info-show-more {
+    text-align: center;
+}
+
+.artist-info-show-more p {
+    color: #C9A976;
+    line-height: 1;
+    margin: 10px;
+}
+
+.artist-info-song-element {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.artist-info-song-title {
+    margin: 5px 0 5px 10px;
+}
+
+.top-songs-title {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: Avenir Next Cyr Thin;
+    margin-bottom: 5px;
+}
+
+.top-songs-artist {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: Avenir Next Cyr Thin;
+}
+
+.artist-info-song-element img {
+    width: 100px;
+    height: 100px;
+}
+
+.top-album {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.like-arrow {
+    width: 20px;
+}
+
+.news-block-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px 20px 10px;
+}
+
+.news-block-element {
+    padding: 10px 10px 30px 10px;
+    background-color: white;
+}
+
+.news-block-element-img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 48px 20px 48px;
+}
+
+.news-block-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+}
+
+.news-block-datetime {
+    font-size: 16px;
+    line-height: 1;
+    padding-bottom: 20px;
+    color: #676767;
+}
+
+.news-block-content {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.news-block-container {
+    background-color: white;
+    padding: 0;
+}
+
+.news-block {
+    margin-top: 10px;
+}
+
+.grey { 
+    background-color: #F1F5F8;
+}
+
+.block-header {
+    padding: 9px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #C3C3C3;
+}
+
+.block-header p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4A4A4A;
+    font-family: Avenir Next Cyr Thin;
+    padding: 0 40px 0 30px;
+    margin: 0;
+}
+
+.horizontal-border {
+    height: 1px;
+    background-color: #C3C3C3;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.news-block-right {
+    background-color: white;
+    border-left: 1px solid #C3C3C3;
+    padding: 0;
+    height: 100%;
+}
+
+.sidebar-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 37px 25px 37px 25px;
+}
+
+.sidebar-chart-element img {
+    width: 95px;
+    height: 95px;
+}
+
+.sidebar-chart-element {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 17px;
+    width: 100%;
+}
+
+.sidebar-chart-element-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.sidebar-chart-element-desc p{
+    padding: 0;
+    line-height: 1;
+}
+
+.sidebar-chart-element-name {
+    font-size: 18px;
+}
+
+.sidebar-vevo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.video-banner {
+    background-color: #25262A;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar-vevo img{
+    width: 100%;
+    padding-bottom: 10px; 
+}
+
+.logo-img {
+    width: 50px;
+    margin: 0 20px 0 20px;
+}
+
+.video-banner-elements img {
+    width: 100%;
+}
+
+.video-banner-elements {
+    padding: 40px 90px 20px 90px;
+    overflow: hidden;
+}
+
+.video-banner-element {
+    margin: 10px 0 30px 0;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.artist-info-img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 500px;
+    padding: 20px 0 10px 0;
+}
+
+.like-comment-block {
+    padding-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.like-comment-block-p {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.insta-p {
+    line-height: 1;
+    margin-bottom: 10px;
 }
