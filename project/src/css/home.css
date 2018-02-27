@@ -282,16 +282,22 @@
 	border: 1px solid #c3c3c3;
 }
 
+.music-block-container, .facts-block-container{
+	padding-left: 52px;
+
+}
+
 .music-news-2-pic-container{
 	display: flex;
 }
 
 .news-2-pic-1{
-	flex : 40%;
+	flex : 30%;
+	margin-right: 8px;
 }
 
 .news-2-pic-2{
-	flex : 60%;
+	flex : 50%;
 }
 
 .music-news-pic-big{
@@ -323,6 +329,10 @@
 .home-footer{
 	display: flex;
 	background-color: #00000E;
+	padding-right: 165px;
+	padding-top: 55px;
+	padding-bottom: 84px;
+	padding-left: 67px;
 }
 
 .home-footer h1{
@@ -346,9 +356,31 @@
 
 .footer-col-2{
 	flex: 35%;
+	margin-left: 94px;
 }
 
 .footer-col-3{
 	flex: 35%;
+	margin-left: 100px;
+}
+
+ol{
+	margin: 0;
+	padding: 20px;
+}
+
+.facts-news-1-image-1{
+	margin-right: 15px;
+}
+
+.facts-news-1-images-small-1, .facts-news-1-images-small-2{
+	margin-bottom: 12px;
+}
+
+.music-block-header, .facts-block-header{
+	border: 1px solid #c3c3c3;
+	padding-top: 20px;
+	padding-left: 58px;
+	padding-bottom: 23px;
 }
 

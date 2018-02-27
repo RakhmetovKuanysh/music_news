@@ -184,8 +184,8 @@ class Home extends Component {
                 Это пятое видео исполнителя, достигшее такого результата.</p>
 
                 <div className = "music-news-2-pic-container">
-                  <img classname = "news-2-pic-1" src = {images.charlie1} alt = ""/>
-                  <img classname = "news-2-pic-2" src = {images.charlie2} alt = ""/>
+                  <img className = "news-2-pic-1" src = {images.charlie1} alt = ""/>
+                  <img className = "news-2-pic-2" src = {images.charlie2} alt = ""/>
                 </div>
                 <div className = "actions-container">
                   <div className = "like-button-container">
@@ -232,11 +232,11 @@ class Home extends Component {
                 <div className = "facts-news-1-images-container">
                     <img className = "facts-news-1-image-1" src = {images.soary}/>
                     <div className = "facts-news-1-images-small-container">
-                      <img src = {images.allthestars}/>
+                      <img className = "facts-news-1-images-small-1" src = {images.allthestars}/>
                       <br/>
-                      <img src = {images.pray4me}/>
+                      <img className = "facts-news-1-images-small-2" src = {images.pray4me}/>
                       <br/>
-                      <img src = {images.rockstar}/>
+                      <img className = "facts-news-1-images-small-3" src = {images.rockstar}/>
                       <br/>
                     </div>
 

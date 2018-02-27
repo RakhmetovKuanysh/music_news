@@ -37,7 +37,7 @@ export default{
 	allthestars,
 	pray4me,
 	rockstar,
-	charliefact
+	charliefact,
     krab2,
     like
 }
