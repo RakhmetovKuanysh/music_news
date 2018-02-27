@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import images from './images';
+
 
 class Header extends Component {
   render() {
@@ -7,13 +9,15 @@ class Header extends Component {
       <div>
         <div className = "header-container">
           <div className = "header-main">
+            <Link to={`/`}>
+                <img className = "logo-img" src = {images.krab2} />
+            </Link>
           </div>
           <div className = "header-menu">
               <Link to={`/music`}><p className = "header-p">МУЗЫКА</p></Link>
               <Link to={`/video`}><p className = "header-p">ВИДЕО</p></Link>
               <Link to={`/news`}><p className = "header-p">НОВОСТИ</p></Link>
               <Link to={`/charts`}><p className = "header-p">ЧАРТЫ</p></Link>
-              <Link to={`/facts`}><p className = "header-p">ФАКТЫ</p></Link>
           </div>
           <div>
             <a><span className="glyphicon glyphicon-log-in header-login"></span></a>
