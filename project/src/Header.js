@@ -8,18 +8,16 @@ class Header extends Component {
     return (
       <div>
         <div className = "header-container">
-          <div className = "header-main">
-            <Link to={`/`}>
-                <img className = "logo-img" src = {images.krab2} />
-            </Link>
-          </div>
           <div className = "header-menu">
-              <Link to={`/music`}><p className = "header-p">МУЗЫКА</p></Link>
-              <Link to={`/video`}><p className = "header-p">ВИДЕО</p></Link>
-              <Link to={`/news`}><p className = "header-p">НОВОСТИ</p></Link>
-              <Link to={`/charts`}><p className = "header-p">ЧАРТЫ</p></Link>
+              <Link to={`/music`} className = "no-text-dec"><p className = "header-p">MUSIC</p></Link>
+              <Link to={`/video`} className = "no-text-dec"><p className = "header-p">VIDEO</p></Link>
+              <div className = "main-logo">
+                <img src = {images.logo} />
+              </div>
+              <Link to={`/news`} className = "no-text-dec"><p className = "header-p">NEWS</p></Link>
+              <Link to={`/charts`} className = "no-text-dec"><p className = "header-p">CHARTS</p></Link>
           </div>
-          <div>
+          <div className = "login-btn">
             <a><span className="glyphicon glyphicon-log-in header-login"></span></a>
           </div>
         </div>
@@ -29,6 +27,9 @@ class Header extends Component {
           </Link>
           <Link to={`/charts/billboard_200`} className = "no-text-dec">
             <p className = "charts-p">Billboard 200</p>
+          </Link>
+          <Link to={`/charts/billboard_200`} className = "no-text-dec">
+            <p className = "charts-p">Radio Songs</p>
           </Link>
           <Link to={`/charts/apple_music_top_100`} className = "no-text-dec">
             <p className = "charts-p">Apple Music Top 100</p>
