@@ -5,6 +5,7 @@ import khn from './img/khn.png'
 import soary from './img/soary.png'
 import krab2 from './img/krab2.png'
 import like from './img/like.png'
+import logo from './img/logo.png'
 
 export default{
 	gs,
@@ -13,5 +14,6 @@ export default{
 	khn,
 	soary,
     krab2,
-    like
+    like,
+    logo
 }
