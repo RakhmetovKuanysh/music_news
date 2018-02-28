@@ -127,6 +127,37 @@
     text-align: center;
 }
 
+.charts-header h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Muli', sans-serif;
+    color: black;
+    padding: 0 0 10px 0;
+}
+
+.charts-date {
+    height: 52px;
+    background-color: black;
+    text-align: center;
+}
+
+.week-of {
+    padding-top: 12px;
+    line-height: 1;
+    font-size: 10px;
+    color: #949494;
+    margin: 0;
+}
+
+.charts-date-day {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    line-height: 1.25;
+}
+
 .all-charts-list {
     display: flex;
     flex-direction: column;
@@ -135,19 +166,36 @@
     margin: 20px 0 40px 0;
 }
 
-.chart-element {
-    border: 1px solid #C3C3C3;
+.flex-row {
     display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.chart-element {
+    display: flex;
+    box-sizing: border-box;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    padding: 10px 0 10px 0;
     margin-top: -1px;
 }
 
 .chart-element-index {
-    padding: 20px;
+    width: 180px;
+    text-align: center;
+}
+
+.chart-element-index p{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
 }
 
 .chart-element-img {
@@ -513,6 +561,7 @@
     font-family: 'Muli', sans-serif;
     font-size: 14px;
     padding: 5px 0 10px 0;
+    color: black;
 }
 
 .footer-content {

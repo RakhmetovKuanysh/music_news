@@ -10,19 +10,8 @@ class Artist extends Component {
   render() {
     return (
       <div>
-        <Route path = {`${this.props.match.path}/:number`} component = {ArtistRouter} />
+        <Route exact path = {`${this.props.match.path}/:number`} component = {ArtistInfo} />
       </div>
-    );
-  }
-}
-
-
-class ArtistRouter extends Component {
-  render() {
-    return (
-      <div>
-        <Route exact path = {`${this.props.match.path}`} component = {ArtistInfo} />
-      </div>  
     );
   }
 }

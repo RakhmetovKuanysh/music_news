@@ -5,6 +5,20 @@ import Footer from './Footer';
 
 class Music extends Component {
   render() {
+    let musicList = this.props.music.map((t) => (
+        <div className = "news-block-element">
+          <div className = "tag">
+            <p>{t.artist_id}</p>
+          </div>
+          <p className = "news-block-title">{t.title}</p>
+          <p className = "news-block-datetime">{t.date}</p>
+          <p className = "news-block-content">{t.content}</p>
+          <img className = "news-block-element-img" src = "https://sun9-1.userapi.com/c840635/v840635724/5a006/iVYKFiRgfMU.jpg" />
+          <div className = "horizontal-border"></div>
+         {/* <img src = {images.like} className = "like-arrow" />*/}
+        </div> 
+    ));
+
     return (
       <div className = "grey">
         <Header />
@@ -15,39 +29,7 @@ class Music extends Component {
             </div>
             <div className = "col-md-8 news-block-left">
               <div className = "news-block-elements">
-                <div className = "news-block-element">
-                  <div className = "tag">
-                    <p>CAMILA CABELLO</p>
-                  </div>
-                  <p className = "news-block-title">Camila Cabello’s first album hit 1bn streams last week</p>
-                  <p className = "news-block-datetime">three hours ago</p>
-                  <p className = "news-block-content">Last week, the album had its billionth stream. 
-                    It only came out last month. “That’s insane,” she says. When we went to press, 
-                    Havana was the 47th most streamed song of all time on Spotify. “That’s crazy,”
-                    she says, genuinely startled. My favourite stat is that fans have spent 15,397
-                    years listening to Cabello’s summery, part-Latino, part-house pop music on 
-                    Spotify. “How many?” Fifteen thousand, three hundred and ninety-seven. “That’s
-                    insane.” Camila went to No 1 in 99 countries and, to put it in context, she
-                    was listened to more in 2017 than Harry Styles.</p>
-                  <img className = "news-block-element-img" src = "https://sun9-1.userapi.com/c840635/v840635724/5a006/iVYKFiRgfMU.jpg" />
-                  <div className = "horizontal-border"></div>
-                 {/* <img src = {images.like} className = "like-arrow" />*/}
-                </div>  
-                <div className = "news-block-element">
-                  <div className = "tag">
-                    <p>CAMILA CABELLO</p>
-                  </div>
-                  <p className = "news-block-title">Camila Cabello Reaches One Billion Spotify Streams with 'Camila'</p>
-                  <p className = "news-block-datetime">yesterday at 16:48</p>
-                  <p className = "news-block-content">Camila's critically acclaimed self-titled debut has been a 
-                    Spotify hit ever since it was released in January.  Not only have all of its singles performed 
-                    well but its album tracks including 'Inside Out', 'In the Dark' and 'Into It' have all surpassed
-                    10 million streams. Not to mention standout cut 'She Loves Control' has been streamed 37 
-                    million times on the platform.</p>
-                  <img className = "news-block-element-img" src = "https://pp.userapi.com/c841527/v841527546/709f8/bZBGwF7USbU.jpg" />
-                  <div className = "horizontal-border"></div>
-                 {/* <img src = {images.like} className = "like-arrow" />*/}
-                </div>  
+                {musicList} 
               </div>
             </div>
             <div className = "col-md-4 news-block-right">
@@ -79,12 +61,16 @@ class Music extends Component {
                 <div className = "horizontal-border"></div>
                 <div className = "sidebar-vevo">
                   <div className = "sidebar-vevo-video">
-                    <img src = "https://i.ytimg.com/vi/4uTNVumfm84/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD630Jdm1P1UV5_cbNp4xWIs0zE1g" />
-                    <p>Maroon 5 - Wait(Offical Video)</p>
+                    <a className = "no-text-dec" href = "https://www.youtube.com/watch?v=4uTNVumfm84">
+                      <img src = "https://i.ytimg.com/vi/4uTNVumfm84/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD630Jdm1P1UV5_cbNp4xWIs0zE1g" />
+                      <p>Maroon 5 - Wait(Offical Video)</p>
+                    </a>
                   </div>
                   <div className = "sidebar-vevo-video">
-                    <img src = "https://i.ytimg.com/vi/kTlv5_Bs8aw/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCylOLj1HDLgLY2WcT7eKvLQKBRhg" />
-                    <p>BTS - Mic Drop(Offical Video)</p>
+                    <a className = "no-text-dec" href = "https://www.youtube.com/watch?v=kTlv5_Bs8aw">
+                      <img src = "https://i.ytimg.com/vi/kTlv5_Bs8aw/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCylOLj1HDLgLY2WcT7eKvLQKBRhg" />
+                      <p>BTS - Mic Drop(Offical Video)</p>
+                    </a>
                   </div>
                 </div>
               </div>

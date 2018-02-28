@@ -11,9 +11,11 @@ class Header extends Component {
           <div className = "header-menu">
               <Link to={`/music`} className = "no-text-dec"><p className = "header-p">MUSIC</p></Link>
               <Link to={`/video`} className = "no-text-dec"><p className = "header-p">VIDEO</p></Link>
-              <div className = "main-logo">
-                <img src = {images.logo} />
-              </div>
+              <Link to={`/`}>
+                <div className = "main-logo">
+                  <img src = {images.logo} />
+                </div>
+              </Link>
               <Link to={`/news`} className = "no-text-dec"><p className = "header-p">NEWS</p></Link>
               <Link to={`/charts`} className = "no-text-dec"><p className = "header-p">CHARTS</p></Link>
           </div>
