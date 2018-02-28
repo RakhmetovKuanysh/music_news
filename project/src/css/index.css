@@ -217,15 +217,16 @@
 
 .chart-element-title {
     font-size: 24px;
-    font-family: Avenir Next Cyr Thin;
-    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
     margin-bottom: 5px;
     line-height: 1;
 }
 
 .chart-element-artist {
     font-size: 18px;
-    font-family: Avenir Next Cyr Thin;
+    font-weight: 200;
+    font-family: 'Muli', sans-serif;
     margin: 0;
     color: black;
 }
@@ -233,13 +234,13 @@
 .artist-info {
     background-color: white;
     width: 40%;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding-bottom: 10px;
+    margin: 0 8px 16px 8px;
+    padding-bottom: 20px;
 }
 
 .artist-info-name {
-    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    font-weight: 800;
     font-size: 28px;
     line-height: 1;
     margin: 0 0 5px 0;
@@ -282,8 +283,8 @@
 }
 
 .artist-info-desc p {
-    font-family: Avenir Next Cyr Thin;
-    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
 }
 
 .margin {
@@ -292,6 +293,7 @@
 
 .artist-info-top-songs-p {
     font-weight: bold;
+    font-family: 'Muli', sans-serif;
     font-size: 18px;
     line-height: 1;
     padding: 20px 0 10px 15px;
@@ -322,16 +324,28 @@
 .top-songs-title {
     font-size: 16px;
     line-height: 1;
-    font-weight: bold;
-    font-family: Avenir Next Cyr Thin;
+    font-weight: 300;
+    font-family: 'Muli', sans-serif;
     margin-bottom: 5px;
 }
 
 .top-songs-artist {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1;
-    font-weight: bold;
-    font-family: Avenir Next Cyr Thin;
+    font-weight: 300;
+    font-family: 'Muli', sans-serif;
+    color: #828282;
+}
+
+.top-album-info {
+    font-family: 'Muli', sans-serif;
+    margin-left: 5px;
+}
+
+.top-album-info-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin:0;
 }
 
 .artist-info-song-element img {
@@ -473,6 +487,7 @@
 .sidebar-chart-element-name {
     font-size: 18px;
     font-weight: 600;
+    color: black;
 }
 
 .sidebar-vevo {
@@ -531,13 +546,17 @@
 
 .like-comment-block-p {
     line-height: 1;
-    padding: 0;
+    padding-left: 3px;
     margin: 0;
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
 }
 
 .insta-p {
     line-height: 1;
+    font-family: 'Muli', sans-serif;
     margin-bottom: 10px;
+    color: #C9AA76;
 }
 
 .tag {
@@ -555,6 +574,7 @@
     font-size: 12px;
     font-family: 'Muli', sans-serif;
     line-height: 1;
+    text-transform: uppercase;
 }
 
 .sidebar-vevo-video p {
@@ -598,4 +618,8 @@
 .main-logo {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.read-more {
+    color: #E34372;
 }

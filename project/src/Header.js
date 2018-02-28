@@ -30,7 +30,7 @@ class Header extends Component {
           <Link to={`/charts/billboard_200`} className = "no-text-dec">
             <p className = "charts-p">Billboard 200</p>
           </Link>
-          <Link to={`/charts/billboard_200`} className = "no-text-dec">
+          <Link to={`/charts/radio_songs`} className = "no-text-dec">
             <p className = "charts-p">Radio Songs</p>
           </Link>
           <Link to={`/charts/apple_music_top_100`} className = "no-text-dec">
