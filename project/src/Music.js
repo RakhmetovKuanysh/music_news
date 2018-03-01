@@ -17,7 +17,7 @@ class Music extends Component {
         <p className = "news-block-title">{t.title}</p>
         <p className = "news-block-datetime">{t.date}</p>
         <p className = "news-block-content">{t.content}</p>
-        <img className = "news-block-element-img" src = "https://sun9-1.userapi.com/c840635/v840635724/5a006/iVYKFiRgfMU.jpg" />
+        <img className = "news-block-element-img" src = {t.img} />
         <div className = "horizontal-border"></div>
        {/* <img src = {images.like} className = "like-arrow" />*/}
       </div>
