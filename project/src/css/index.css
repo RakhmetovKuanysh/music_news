@@ -744,3 +744,33 @@
     margin-left: 30px;
     color: #727275;
 }
+
+.login-page {
+    background-image: url(https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0e3df374e72a1172cd928719eff2ba25&auto=format&fit=crop&w=1950&q=80);
+    height: 640px;
+}
+
+.login-page-form {
+    margin-top: 20%;
+    height: 300px;
+    border-radius: 20px;
+    background: rgba(10, 10, 10, 0.5);
+    padding: 60px;
+}
+
+.login-page-form-input {
+    margin-bottom: 15px;
+    font-size: 16px;
+    height: 48px;
+    font-family: 'Muli', sans-serif;
+}
+
+.login-page-btn {
+    width: 100%;
+    margin-top: 10px;
+    height: 48px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    background-color: #E34372;
+    border: none;
+}

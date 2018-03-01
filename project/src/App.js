@@ -6,6 +6,7 @@ import News from './News';
 import Video from './Video';
 import Charts from './Charts';
 import Artist from './Artist';
+import Login from './Login';
 
 
 class App extends Component {
@@ -93,9 +94,18 @@ class App extends Component {
           "songs": [1, 2, 3, 4, 5, 6],
         },
       ],
+      "users": [
+        {
+          "id": 1,
+          "login": "kuanyshrakhmetov@gmail.com",
+          "password": "kuanysh",
+        }
+      ],
+      "user": null,
     };
 
     this.getArtist = this.getArtist.bind(this);
+    this.getUser = this.getUser.bind(this);
   }
 
   getArtist(id) {
@@ -103,6 +113,18 @@ class App extends Component {
     let artist = name[0];
 
     return artist;
+  }
+
+  getUser(login, password) {
+    console.log(login);
+    console.log(password);
+
+    let user = this.state.users.filter(t => t.login == login && t.password == password);
+    if(user.length > 0) {
+      this.setState({
+        "user": user[0],
+      })
+    }
   }
 
   render() {
@@ -124,6 +146,8 @@ class App extends Component {
             albums = {this.state.albums}
             music = {this.state.music}
             getArtist = {this.getArtist} {...props} />)} />
+          <Route path = '/login' render = {(props) => (<Login
+            getUser = {this.getUser} user = {this.state.user} {...props} />)} />
         </div>
       </BrowserRouter>
     );

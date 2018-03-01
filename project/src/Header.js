@@ -20,7 +20,9 @@ class Header extends Component {
               <Link to={`/charts`} className = "no-text-dec"><p className = "header-p">CHARTS</p></Link>
           </div>
           <div className = "login-btn">
-            <a><span className="glyphicon glyphicon-log-in header-login"></span></a>
+            <Link className = "no-text-dec" to={`/login`}>
+              <span className="glyphicon glyphicon-log-in header-login"></span>
+            </Link>
           </div>
         </div>
         <div className = "charts-list">
