@@ -188,7 +188,7 @@ class ArtistInfo extends Component {
                 <p className = "artist-info-name">{artist.name}</p>
                 <a href = "https://www.instagram.com/camila_cabello/?hl=ru">
                   <p className = "insta-p">
-                    @camila_cabello
+                    @{artist.name}
                   </p>
                 </a>
               </div>

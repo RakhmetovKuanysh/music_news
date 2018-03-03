@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './Home';
 import Music from './Music';
-import News from './News';
+import Artists from './Artists';
 import Video from './Video';
 import Charts from './Charts';
 import Artist from './Artist';
@@ -85,6 +85,12 @@ class App extends Component {
           "title": "Scar Tissue",
           "artist_id": 1,
           "img": "https://img.discogs.com/omoUouDts9fYk440Kf8p1TuS6WU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-11386038-1515369252-9728.png.jpg",
+        },
+        {
+          "id": 7,
+          "title": "What Do You Mean?",
+          "artist_id": 2,
+          "img": "https://fthmb.tqn.com/yjmzBa7PVupW3jScwArxLojxI5M=/768x0/filters:no_upscale()/justin-bieber-what-do-you-mean-57bb69285f9b58cdfd3a86b9.jpg",
         }
       ],
       "albums": [
@@ -94,8 +100,14 @@ class App extends Component {
           "artist_id": 1,
           "date": "12 January 2018",
           "img": "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/32/53/40/325340a2-c77e-777d-c391-64ed74434f2d/886446870298.jpg/600x600bf.jpg",
-          "songs": [1, 2, 3, 4, 5, 6],
         },
+        {
+          "id": 2,
+          "title": "Purpose",
+          "artist_id": 2,
+          "date": "16 September 2016",
+          "img": "https://is3-ssl.mzstatic.com/image/thumb/Music6/v4/57/4a/71/574a712f-b128-e56f-907c-32fae1c4f7cf/UMG_cvrart_00602547587411_01_RGB72_1500x1500_15UMGIM59807.jpg/1200x630bb.jpg",
+        }
       ],
       "users": [
         {
@@ -113,8 +125,8 @@ class App extends Component {
       },
       "musicCnt": 3,
       "userCnt": 2,
-      "albumCnt": 2,
-      "songCnt": 7,
+      "albumCnt": 3,
+      "songCnt": 8,
       "artistCnt": 3,
     };
 
@@ -123,6 +135,21 @@ class App extends Component {
     this.addMusicNews = this.addMusicNews.bind(this);
     this.addArtist = this.addArtist.bind(this);
     this.addAlbum = this.addAlbum.bind(this);
+    this.editAlbum = this.editAlbum.bind(this);
+  }
+
+  editAlbum(id, title, artist_id, date, img) {
+    let albums = this.state.albums;
+    let album = albums.find(al => al.id == id);
+
+    album.title = title;
+    album.artist_id = artist_id;
+    album.date = date;
+    album.img = img;
+
+    this.setState({
+      "albums": albums,
+    })
   }
 
   getArtist(id) {
@@ -231,8 +258,9 @@ class App extends Component {
           <Route path = '/video' render = {(props) => (<Video 
             music = {this.state.music}
             getArtist = {this.getArtist} {...props} />)} />
-          <Route path = '/news' render = {(props) => (<News 
+          <Route path = '/artists' render = {(props) => (<Artists 
             music = {this.state.music}
+            artists = {this.state.artists}
             getArtist = {this.getArtist} {...props} />)} />
           <Route path = '/charts' component = {Charts} />
           <Route path = '/artist' render = {(props) => (<Artist
@@ -250,6 +278,7 @@ class App extends Component {
             music = {this.state.music}
             getArtist = {this.getArtist}
             addArtist = {this.addArtist}
+            editAlbum = {this.editAlbum}
             addAlbum = {this.addAlbum}
             addMusicNews = {this.addMusicNews}
             getUser = {this.getUser} user = {this.state.user} {...props} />)} />

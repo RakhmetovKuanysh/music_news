@@ -37,17 +37,7 @@ class AdminSidebar extends Component {
           <ul class="nav menu">
             <li class="active">
               <Link to = {`/admin/${this.props.user.id}/panel/music`} >
-                <em class="fa fa-dashboard">&nbsp;</em>Music
-              </Link>
-            </li>
-            <li>
-              <Link to = {`/admin/${this.props.user.id}/panel/news`} >
-                <em class="fa fa-dashboard">&nbsp;</em>News
-              </Link>
-            </li>
-            <li>
-              <Link to = {`/admin/${this.props.user.id}/panel/charts`} >
-                <em class="fa fa-dashboard">&nbsp;</em>Charts
+                <em>&nbsp;</em>Music
               </Link>
             </li>
             <li>
@@ -60,10 +50,26 @@ class AdminSidebar extends Component {
                 <em class="fa fa-dashboard">&nbsp;</em>Albums
               </Link>
             </li>
-            <li>
-              <Link to = {`/admin/${this.props.user.id}/panel/songs`} >
-                <em class="fa fa-dashboard">&nbsp;</em>Songs
-              </Link>
+            <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+              <em class="fa fa-navicon">&nbsp;</em> Charts <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+              </a>
+              <ul class="children collapse" id="sub-item-1">
+                <li><a class="" href="#">
+                  <span class="fa fa-arrow-right">&nbsp;</span> Billboard Hot 100
+                </a></li>
+                <li><a class="" href="#">
+                  <span class="fa fa-arrow-right">&nbsp;</span> Biilboard 200
+                </a></li>
+                <li><a class="" href="#">
+                  <span class="fa fa-arrow-right">&nbsp;</span> Spotify 200
+                </a></li>
+                <li><a class="" href="#">
+                  <span class="fa fa-arrow-right">&nbsp;</span> Apple Music Top 100
+                </a></li>
+                <li><a class="" href="#">
+                  <span class="fa fa-arrow-right">&nbsp;</span> Radio Songs
+                </a></li>
+              </ul>
             </li>
             <li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
           </ul>

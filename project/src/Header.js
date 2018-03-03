@@ -16,7 +16,7 @@ class Header extends Component {
                   <img src = {images.logo} />
                 </div>
               </Link>
-              <Link to={`/news`} className = "no-text-dec"><p className = "header-p">NEWS</p></Link>
+              <Link to={`/artists`} className = "no-text-dec"><p className = "header-p">ARTISTS</p></Link>
               <Link to={`/charts`} className = "no-text-dec"><p className = "header-p">CHARTS</p></Link>
           </div>
           <div className = "login-btn">

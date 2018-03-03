@@ -10,18 +10,52 @@ class AdminAlbum extends Component {
 
     this.state = {
       "editableAlbum": null,
+      "title": "",
+      "artist_id": "",
+      "date": "",
+      "img": "",
     }
 
     this.editAlbum = this.editAlbum.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.makeEditable = this.makeEditable.bind(this);
   }
 
-  editAlbum(album) {
-    console.log(album);
+  makeEditable(album) {
     this.setState({
       "editableAlbum": album,
+      "title": album.title,
+      "artist_id": album.artist_id,
+      "date": album.date,
+      "img": album.img,
     });
+  }
 
-    console.log(this.state.editableAlbum);
+  editAlbum(e) {
+    e.preventDefault();
+
+    this.props.editAlbum(this.state.editableAlbum.id, this.state.title, this.state.artist_id,
+      this.state.date, this.state.img);
+  }
+
+  handleChange(e) {
+    if(e.target.name == "title") {
+      this.setState({
+        "title": e.target.value,
+      });
+    } else if(e.target.name == "artist_id") {
+      this.setState({
+        "artist_id": e.target.value,
+      });
+    } else if(e.target.name == "img") {
+      this.setState({
+        "img": e.target.value,
+      });
+    } else if(e.target.name == "date") {
+      this.setState({
+        "date": e.target.value,
+      });
+    }
   }
 
   render() {
@@ -30,13 +64,48 @@ class AdminAlbum extends Component {
     let editBlock = null;
 
     if(this.state.editableAlbum != null) {
-      editBlock = <div class="panel panel-default">
+      editBlock = 
+      <div class="panel panel-default">
         <div class="panel-heading">
           <p>Edit Album</p>
         </div>
         <div class="panel-body">
           <div class="canvas-wrapper">
-            
+            <form onSubmit = {this.editAlbum} method="post">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Title:</label>
+                <div class="col-sm-10">
+                  <input type="text" onChange = {this.handleChange} value = {this.state.title}
+                    class="form-control" name="title" placeholder="Insert title"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Artist:</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="artist_id" onChange = {this.handleChange} 
+                    value={this.state.artist_id}>
+                    {this.props.artists.map(artist =>
+                      <option value={artist.id}>{artist.name}</option>
+                    )}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Date:</label>
+                <div class="col-sm-10">
+                  <input type="text" onChange = {this.handleChange} value = {this.state.date}
+                    class="form-control" name="date" placeholder="Insert date of the album"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Img link:</label>
+                <div class="col-sm-10">
+                  <input type="text" name="img" onChange = {this.handleChange}
+                    class="form-control" value = {this.state.img} placeholder="Insert image link"/>
+                </div>
+              </div>
+              <input type="submit" className="btn btn-primary float-right" value="EDIT ALBUM"/>
+            </form>
           </div>
         </div>
       </div>
@@ -86,7 +155,7 @@ class AdminAlbum extends Component {
                         </thead>
                         <tbody>
                           {this.props.albums.map(item => 
-                            <tr key = {item.id} onClick = {(album) => this.editAlbum(item)}>
+                            <tr key = {item.id} onClick = {(album) => this.makeEditable(item)}>
                               <th scope="row">{item.id}</th>
                               <td>{item.title}</td>
                               <td>{this.props.getArtist(item.artist_id).name}</td>

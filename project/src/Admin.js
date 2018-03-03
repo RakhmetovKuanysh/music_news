@@ -49,6 +49,8 @@ class Admin extends Component {
         <Route exact path = {`${this.props.match.path}/:admin_id/panel/albums`} 
           render = {(props) => (<AdminAlbum
           albums = {this.props.albums}
+          artists = {this.props.artists}
+          editAlbum = {this.props.editAlbum}
           getArtist = {this.props.getArtist}
           user = {this.props.user} {...props} />)} />
         <Route exact path = {`${this.props.match.path}/:admin_id/panel/albums/add_new`} 
