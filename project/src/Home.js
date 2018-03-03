@@ -11,10 +11,10 @@ class Home extends Component {
         <header className = "masthead">
           <div className = "container banner-container">
             <div className = "intro-text">
-              <div className = "intro-lead-in">НОВЫЙ АЛЬБОМ ДЖАСТИНА ТИМБЕРЛЕЙКА</div>
+              <div className = "intro-lead-in">JUSTIN TIMBERLAKE'S NEW ALBUM</div>
               <div className = "intro-heading text-uppercase">"MAN OF THE WOODS"</div>
               <a className = "btn home-btn js-scroll-trigger" href="#services">
-                <p>ПОСЛУШАТЬ</p>
+                <p>LISTEN</p>
               </a>
             </div>
           </div>

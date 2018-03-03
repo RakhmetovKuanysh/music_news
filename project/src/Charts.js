@@ -13,6 +13,7 @@ class Charts extends Component {
   render() {
     return (
       <div>
+        <Route exact path = {`${this.props.match.path}`} component = {ChartsList} />
         <Route path = {`${this.props.match.path}/billboard_hot_100`} component = {BillboardHot100} />
         <Route path = {`${this.props.match.path}/billboard_200`} component = {Billboard200} />
         <Route path = {`${this.props.match.path}/radio_songs`} component = {RadioSongs} />

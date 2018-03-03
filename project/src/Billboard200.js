@@ -49,7 +49,7 @@ class Billboard200 extends Component {
     return (
       <div>
         <Header />
-        <div className = "container">
+        <div className = "container white-container">
           <div className = "charts-header">
             <h1>Billboard 200</h1>
           </div>

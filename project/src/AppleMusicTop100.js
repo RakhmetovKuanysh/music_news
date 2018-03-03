@@ -49,7 +49,7 @@ class AppleMusicTop100 extends Component {
     return (
       <div>
         <Header />
-        <div className = "container">
+        <div className = "container white-container">
           <div className = "charts-header">
             <h1>Apple Music Top 100</h1>
           </div>

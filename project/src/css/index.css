@@ -771,6 +771,51 @@
     height: 48px;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
-    background-color: #E34372;
+    color: whitesmoke !important;
+    background-color: #E34372 !important;
     border: none;
+}
+
+.adminBody {
+    margin-top: 60px;
+}
+
+.add-new-button {
+    float: right;
+    position: absolute;
+    width: 100px;
+    right: 30px;
+    top: 15px;
+}
+
+.col-form-label {
+    font-weight: 400 !important;
+    font-size:  18px;
+    line-height: 2.5;
+}
+
+.float-right {
+    float: right;
+}
+
+.white-container {
+    background-color: white !important;
+    padding: 0;
+}
+
+.charts-list-element {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.charts-list-element img {
+    width: 100%;
+}
+
+.charts-list-element p {
+    font-family: 'Muli', sans-serif;
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 200px;
 }

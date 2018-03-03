@@ -23,7 +23,7 @@ class Artist extends Component {
           albums = {this.props.albums}
           music = {this.props.music}
           getArtist = {this.props.getArtist} {...props} />)} />
-        <Route exact path = {`${this.props.match.path}/:number/album/`} 
+        <Route exact path = {`${this.props.match.path}/:number/album`} 
           render = {(props) => (<ArtistAlbumList
           albums = {this.props.albums}
           getArtist = {this.props.getArtist} {...props} />)} />
@@ -60,7 +60,7 @@ class ArtistAlbumList extends Component {
             <div className = "horizontal-border"></div>
             <div className = "artist-album-list">
               {albums.map(album => 
-                <Link to = {`/artist/${artist_id}/album/${album.id}`}>
+                <Link to = {`/artist/${artist_id}/album/${album.id}`} >
                   <div className = "col-md-2 artist-album-list-element">
                     <img src = {album.img} />
                     <div>

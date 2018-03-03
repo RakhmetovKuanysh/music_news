@@ -49,7 +49,7 @@ class Spotify200 extends Component {
     return (
       <div>
         <Header />
-        <div className = "container">
+        <div className = "container white-container">
           <div className = "charts-header">
             <h1>Spotify 200</h1>
           </div>
