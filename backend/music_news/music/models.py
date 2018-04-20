@@ -78,7 +78,7 @@ class News(models.Model):
                                     verbose_name=u"Название")
     date = models.DateTimeField(verbose_name=u"Дата публикации",
                                     null=True)
-    content = models.CharField(max_length=500, blank=False,
+    content = models.CharField(max_length=2500, blank=False,
                                     verbose_name=u"Содержание")
     artist = models.ForeignKey(settings.ARTIST_MODEL, verbose_name=u"Артист",
                                     null=True, on_delete=models.CASCADE)

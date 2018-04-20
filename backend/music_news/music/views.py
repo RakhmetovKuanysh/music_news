@@ -3,23 +3,26 @@ from django.http import HttpResponse, JsonResponse, QueryDict
 from django.views.decorators.csrf import csrf_exempt
 from music.models import *
 from utils import messages
+import datetime, json
 
 
 @csrf_exempt
 def artist_list(request):
     try:
         if request.method == "GET":
-            artists = Artist.objects.filter(is_active=True)
+            artists = Artist.objects.filter(is_active=True).order_by('name')
             artists_json = [artist.full() for artist in artists]
             return JsonResponse(artists_json, safe=False)
 
         elif request.method == "POST":
             try:
+                print (request.POST)
                 name = request.POST['name']
                 description = request.POST['description']
                 genre = request.POST['genre']
                 photo_url = request.FILES['photo_url']
             except Exception as e:
+                print (str(e))
                 return JsonResponse({"message": messages.NOT_ENOUGH_DATA}, 
                     status=400)
 
@@ -27,7 +30,9 @@ def artist_list(request):
                 description=description, genre=genre, photo_url=photo_url)
         
             return JsonResponse(artist.full(), status=201)
+
     except Exception as e:
+        print (str(e))
         return JsonResponse({"error": str(e)}, status=400)
 
 
@@ -109,11 +114,11 @@ def news_list(request):
         elif request.method == "POST":
             try:
                 title = request.POST['title']
-                date = request.POST['date']
                 content = request.POST['content']
                 photo_url = request.FILES['photo_url']
                 artist_id = request.POST['artist_id']
 
+                print (request.POST)
                 try:
                     artist = Artist.objects.get(pk=artist_id, 
                         is_active=True)
@@ -121,15 +126,19 @@ def news_list(request):
                     return JsonResponse({"error": str(e)}, status=404)
 
             except Exception as e:
-                return JsonResponse({"message": messages.NOT_ENOUGH_DATA}, 
+                print (str(e))
+                return JsonResponse({"message": str(e)}, 
                     status=400)
 
-            news = News.objects.add_news(title=title, date=date, 
+
+            news = News.objects.add_news(title=title, date=datetime.datetime.now(), 
                 content=content, photo_url=photo_url, artist=artist)
 
+            print (news)
             return JsonResponse(news.full(), status=201)
 
     except Exception as e:
+        print (str(e))
         return JsonResponse({"error": str(e)}, status=400)
 
 
@@ -170,6 +179,8 @@ def news_detail(request, news_id):
             return JsonResponse(news.full(), status=200)
 
         elif request.method == "DELETE":
+            print("HELLO")
+            print(news_id)
             news.is_active = False
             news.save()
 

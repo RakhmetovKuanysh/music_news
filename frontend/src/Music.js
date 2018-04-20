@@ -10,14 +10,14 @@ class Music extends Component {
     let musicList = this.props.music.map((t) => (
       <div className = "news-block-element">
         <div className = "tag">
-          <Link to = {`/artist/${t.artist_id}`} className = "no-text-dec">
-            <p>{this.props.getArtist(t.artist_id).name}</p>
+          <Link to = {`/artist/${t.artist.id}`} className = "no-text-dec">
+            <p>{t.artist.name}</p>
           </Link>
         </div>
         <p className = "news-block-title">{t.title}</p>
         <p className = "news-block-datetime">{t.date}</p>
         <p className = "news-block-content">{t.content}</p>
-        <img className = "news-block-element-img" src = {t.img} />
+        <img className = "news-block-element-img" src = {"http://localhost:8000" + t.photo_url} />
         <div className = "horizontal-border"></div>
        {/* <img src = {images.like} className = "like-arrow" />*/}
       </div>

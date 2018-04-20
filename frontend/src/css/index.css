@@ -558,7 +558,9 @@
 }
 
 .artist-info-img {
-    width: 60%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -677,7 +679,9 @@
 }
 
 .artist-album-list-element img{
-    width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 5px;
 }
@@ -818,4 +822,8 @@
     font-size: 36px;
     font-weight: 600;
     line-height: 200px;
+}
+
+.padding-left {
+    padding-left: 20px;
 }
